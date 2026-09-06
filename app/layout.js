@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-name",
 });
 
