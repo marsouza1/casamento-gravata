@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* Fundo claro sofisticado — usado na home e no painel do celular */
+.bg-wedding {
+  background-color: #fbf7f0;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(231, 211, 179, 0.55), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(200, 162, 75, 0.22), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(240, 230, 214, 0.9), transparent 55%),
+    linear-gradient(160deg, #fdfbf6 0%, #f6efe2 100%);
+  background-attachment: fixed;
+}
+
+/* Fundo escuro do telão — dashboard estilo placar */
+.bg-scoreboard {
+  background-color: #05070c;
+  background-image:
+    radial-gradient(circle at 8% 8%, rgba(58, 98, 150, 0.28), transparent 42%),
+    radial-gradient(circle at 92% 0%, rgba(212, 175, 106, 0.14), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(20, 26, 38, 0.9), transparent 60%),
+    linear-gradient(160deg, #05070c 0%, #0b0e15 45%, #050608 100%);
+  background-attachment: fixed;
+}
+
+.texture-dots {
+  background-image: radial-gradient(rgba(200, 162, 75, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(180deg, #d8b866 0%, #c8a24b 45%, #9c7a2e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Dourado mais claro, para textos grandes sobre fundo escuro (telão) */
+.text-gold-gradient-dark {
+  background: linear-gradient(180deg, #f6e2ab 0%, #d4af6a 55%, #a9822f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 162, 75, 0.7), transparent);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
