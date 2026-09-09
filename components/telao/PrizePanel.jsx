@@ -12,8 +12,10 @@ export default function PrizePanel({ prizeTitle, prizeImageUrl }) {
   return (
     <aside className="rounded-[20px] border border-goldSoft/20 bg-gradient-to-b from-panel to-panel2 p-5 flex flex-col items-center">
       <div className="text-center mb-4">
-        <p className="text-xs uppercase tracking-wide text-muted">Exclusivo para</p>
-        <p className="font-serifName font-bold text-lg mt-0.5 text-goldBright">o 1º Lugar</p>
+        <p className="font-serifName font-bold text-2xl sm:text-3xl leading-tight text-goldBright drop-shadow-[0_0_18px_rgba(243,212,138,0.45)]">
+          Prêmio para
+          <br />o 1º Lugar
+        </p>
       </div>
 
       <div className="w-full flex items-center justify-center rounded-2xl border border-goldSoft/30 mb-4 py-4 px-2 min-h-[220px] bg-goldSoft/5">
