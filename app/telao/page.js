@@ -2,7 +2,6 @@
 
 import { useGifts } from "@/hooks/useGifts";
 import { useSettings } from "@/hooks/useSettings";
-import { formatBRL } from "@/lib/format";
 import RankingBoard from "@/components/telao/RankingBoard";
 import Sidebar from "@/components/telao/Sidebar";
 import PrizePanel from "@/components/telao/PrizePanel";
@@ -20,34 +19,35 @@ export default function TelaoPage() {
   const { prizeTitle, prizeImageUrl } = useSettings();
 
   const rest = gifts.slice(3, 10);
-  const total = gifts.reduce((soma, g) => soma + Number(g.amount), 0);
   const participantes = gifts.length;
 
   return (
     <main className="bg-scoreboard min-h-screen text-[#EDEBE3]">
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 py-6 sm:py-7 min-h-screen flex flex-col">
         {/* -------- TOPO -------- */}
-        <header className="flex items-start justify-between mb-6">
-          <div>
-            <p className="font-number uppercase tracking-[0.35em] text-xs text-muted">Casamento</p>
-            <h1 className="font-serifName font-bold text-3xl sm:text-4xl mt-1">
-              Leo <span className="text-goldSoft">❤</span> Lari
-            </h1>
-            <p className="font-number uppercase tracking-[0.2em] text-xs mt-1 text-muted">
-              Ranking da Gravata
-            </p>
+        <header className="mb-6">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="font-number uppercase tracking-[0.35em] text-xs text-muted">Casamento</p>
+              <h1 className="font-serifName font-bold text-2xl sm:text-3xl mt-1">
+                Leo <span className="text-goldSoft">❤</span> Lari
+              </h1>
+            </div>
+
+            <div className="text-right">
+              <Clock />
+              {gifts.length > 0 && (
+                <p className="font-number text-xs text-muted mt-2 tabular">
+                  Participantes <span className="text-goldSoft font-semibold">{participantes}</span>
+                </p>
+              )}
+            </div>
           </div>
 
-          <div className="text-right">
-            <Clock />
-            {gifts.length > 0 && (
-              <p className="font-number text-xs text-muted mt-2 tabular">
-                Total <span className="text-goldSoft font-semibold">{formatBRL(total)}</span>
-                {"  ·  "}
-                Participantes <span className="text-goldSoft font-semibold">{participantes}</span>
-              </p>
-            )}
-          </div>
+          {/* Título grande e centralizado, logo acima do ranking */}
+          <h2 className="font-serifName font-bold text-center text-4xl sm:text-6xl mt-4 sm:mt-6 text-gold-gradient-dark">
+            Ranking da Gravata
+          </h2>
         </header>
 
         {/* -------- CONTEÚDO -------- */}
