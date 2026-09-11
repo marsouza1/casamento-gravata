@@ -45,7 +45,7 @@ export default function TelaoPage() {
           </div>
 
           {/* Título grande e centralizado, logo acima do ranking */}
-          <h2 className="font-serifName font-bold text-center leading-[1.3] pb-1 text-4xl sm:text-6xl mt-4 sm:mt-6 mb-2 sm:mb-4 text-gold-gradient-dark">
+          <h2 className="font-serifName font-bold text-center leading-[1.3] pb-1 text-4xl sm:text-6xl mt-4 sm:mt-6 mb-6 sm:mb-10 text-gold-gradient-dark">
             Ranking da Gravata
           </h2>
         </header>
